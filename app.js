@@ -2,16 +2,16 @@ const { numMayor, numMenor, suma, lista } = require('./operaciones');
 
 // aqui se hacen todas las operaciones 
 function operaciones(numeros) {
-  console.log("Números recibidos:", numeros);
+  console.log("Numeros recibidos:", numeros);
 
   const numeroMayor = numMayor(numeros);
-  console.log("Número mayor:", numeroMayor);
+  console.log("Numero mayor es :", numeroMayor);
 
   const numeroMenor = numMenor(numeros);
-  console.log("Número menor:", numeroMenor);
+  console.log("Numero menor es :", numeroMenor);
 
   const sumatoria = suma(numeros);
-  console.log("Sumatoria:", sumatoria);
+  console.log("Sumatoria de los numeros es:", sumatoria);
 
   const listaOrdenada = lista(numeros);
   console.log("Lista ordenada:", listaOrdenada);
