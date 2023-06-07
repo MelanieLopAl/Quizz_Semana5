@@ -17,7 +17,7 @@ function operaciones(numeros) {
   console.log("Lista ordenada:", listaOrdenada);
 }
 
-// Array de números de ejemplo
+// ejemplo de numeros, se pueden cambiar 
 const numeros = [8, 4, 6, 7, 2, 0, 5, 10, 1, 50, 11, 9, 63, 43, 32, 33, 80, 30, 23, 22];
-// Llamar a la función principal con el array de números
+
 operaciones(numeros);
