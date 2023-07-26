@@ -20,5 +20,5 @@ const nuevoServer = http.createServer((req, res) => {
 const port = 3000;
 
 nuevoServer.listen(port, () =>{
-  console.log(`http://localhost:${PORT}/ aqui corre el servidor`);
+  console.log(`http://localhost:${port}/ aqui corre el servidor`);
 })
