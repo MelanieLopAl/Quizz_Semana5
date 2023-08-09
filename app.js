@@ -15,6 +15,7 @@ app.post('/task/', (req, res) => {
   res.send('se agrego algo a la lista');
 });
 
+// ejemplo : /image/ronny
 app.get('/image/:username', (req, res) => {
   const username = req.params.username;
   if (username === 'ronny') {
