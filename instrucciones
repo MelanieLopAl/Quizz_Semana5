@@ -1,0 +1,15 @@
+1-Crea un servidor HTTP utilizando Express en Node.js que responda a diferentes rutas con diferentes mensajes.
+
+2-El servidor debe responder a las siguientes rutas:
+
+--Ruta raíz ("/"):"¡Bienvenido al servidor HTTP usando Express!"
+
+--Ruta "/task" get: "Esta ruta va a devolver una lista de tareas" para efectos del registro registrar el id nombre de la tarea, una breve descripcion
+
+--Ruta "/task" post: "agrega una nueva tarea a la lista"
+
+–Ruta “/image/:username”: si el username ===’ronny’ devuelve una imagen ( la imagen es a gusto del estudiante) 
+
+--Cualquier otra ruta: "Página no encontrada"
+
+Escucha en el puerto 3000.

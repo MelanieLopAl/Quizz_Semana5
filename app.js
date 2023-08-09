@@ -1,24 +1,33 @@
-const http = require ('http')
-
-const nuevoServer = http.createServer((req, res) => {
-  const url = req.url
-  if (url === '/') {
-    res.writeHead(200, {'Content-Type':'text/plain'})
-    res.end ('Bienvenido a este nuevo sitio')
-  } else if (url === '/about') {
-    res.writeHead(200, {'Content-Type': 'text/plain'})
-    res.end ('Esta es la pagina donde vas a saber mucho mas de nosotros')
-  } else if (url === '/contact') {
-    res.writeHead(200, {'Content-Type': 'text/plain'})
-    res.end('contactanos a este correo: contact@example.com')
-  } else {
-    res.writeHead(404, {'Content-Type': 'text/plain'})
-    res.end('Pagina no encontrada, tratalo con "/contact", "/about"')
-  }
-})
-  
+const express = require('express');
+const app = express();
 const port = 3000;
 
-nuevoServer.listen(port, () =>{
-  console.log(`http://localhost:${port}/ aqui corre el servidor`);
-})
+app.get('/', (req, res) => {
+  res.send('hola, bienvenido al servidor usando Express');
+});
+
+app.get('/task', (req, res) => {
+  res.send('esto va a devolver algo');
+});
+
+//esta no estoy muy segura de porque no me dio o como pude haberla corregido :c
+app.post('/task/', (req, res) => {
+  res.send('se agrego algo a la lista');
+});
+
+app.get('/image/:username', (req, res) => {
+  const username = req.params.username;
+  if (username === 'ronny') {
+    res.sendFile('username.png', { root: __dirname });
+  } else {
+    res.status(404).send('ups, algo malo paso, trata de nuevo');
+  }
+});
+
+app.use((req, res) => {
+  res.status(404).send('ups, algo malo paso, vuelve a intentarlo');
+});
+
+app.listen(port, () => {
+  console.log(`http://localhost:${port}`);
+});
