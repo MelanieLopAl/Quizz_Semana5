@@ -10,7 +10,7 @@ app.get('/task', (req, res) => {
   res.send('esto va a devolver algo');
 });
 
-//esta no estoy muy segura de porque no me dio o como pude haberla corregido :c
+//me falto tiempo para terminarla :c
 app.post('/task/', (req, res) => {
   res.send('se agrego algo a la lista');
 });
